@@ -16,9 +16,6 @@ dependencies {
     implementation 'log4j:log4j:1.2.17'
 }
 
-application {
-    mainClass = 'com.test.Project'
-}
 
 jar {
     archiveBaseName = 'ci-training'
