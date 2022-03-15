@@ -23,4 +23,23 @@ application {
 jar {
     archiveBaseName = 'ci-training'
     archiveVersion =  '1.0'
+    manifest {
+        attributes 'Main-Class': 'com.test.Project'
+}
+}
+
+task "build-custom" (type:Exec) {
+    commandLine "gradle", "build"
+}
+
+task "test-custom" (type:Exec){
+    dependsOn ':home-task:build-custom'
+    commandLine "gradle", "test"
+}
+
+task hello {
+    dependsOn ':home-task:test-custom'
+    doLast {
+        println "Hello from Gradle"
+    }
 }
