@@ -1,0 +1,26 @@
+plugins {
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    testImplementation 'junit:junit:4.13.2'
+    implementation 'com.google.guava:guava:30.1.1-jre'
+    implementation 'org.apache.commons:commons-collections4:4.4'
+    implementation 'log4j:log4j:1.2.17'
+}
+
+application {
+    mainClass = 'com.test.Project'
+}
+
+jar {
+    archiveBaseName = 'ci-training'
+    archiveVersion =  '1.0'
+}
