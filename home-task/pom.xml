@@ -4,7 +4,7 @@
     <groupId>homework.maven.pom</groupId>
     <artifactId>ci-training</artifactId>
     <version>1.0</version>
-    <packaging>jar</packaging>
+    <packaging>tar.gz</packaging>
 
     <properties>
     <maven.compiler.source>1.8</maven.compiler.source>
