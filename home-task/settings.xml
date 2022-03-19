@@ -20,7 +20,7 @@
       <!--all requests to nexus via the mirror -->
       <repositories>
         <repository>
-          <id>Nexus3</id>
+          <id>central</id>
           <url>http://central</url>
           <releases><enabled>true</enabled></releases>
           <snapshots><enabled>true</enabled></snapshots>
