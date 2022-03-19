@@ -1,7 +1,7 @@
 <settings>
   <servers>
       <server>
-         <id>maven-public</id>
+         <id>Nexus3</id>
          <username>admin</username>
          <password>devops</password>
       </server>
@@ -20,7 +20,7 @@
       <!--all requests to nexus via the mirror -->
       <repositories>
         <repository>
-          <id>central</id>
+          <id>Nexus3</id>
           <url>http://central</url>
           <releases><enabled>true</enabled></releases>
           <snapshots><enabled>true</enabled></snapshots>
