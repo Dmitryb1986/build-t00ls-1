@@ -2,8 +2,8 @@
   <servers>
       <server>
          <id>Nexus3</id>
-         <username>admin</username>
-         <password>devops</password>
+         <username>jenkins</username>
+         <password>jenkins</password>
       </server>
   </servers>
   <mirrors>
@@ -15,7 +15,7 @@
   </mirrors>
   <profiles>
     <profile>
-      <id>admin</id>
+      <id>jenkins</id>
       <!--Enable snapshots for the built in central repo to direct -->
       <!--all requests to nexus via the mirror -->
       <repositories>
@@ -38,6 +38,6 @@
   </profiles>
   <activeProfiles>
     <!--make the profile active all the time -->
-    <activeProfile>admin</activeProfile>
+    <activeProfile>jenkins</activeProfile>
   </activeProfiles>
 </settings>
