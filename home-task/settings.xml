@@ -1,7 +1,7 @@
 <settings>
   <servers>
       <server>
-         <id>NexusRepo</id>
+         <id>maven-public</id>
          <username>admin</username>
          <password>devops</password>
       </server>
