@@ -5,6 +5,12 @@
     <artifactId>ci-training</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
+     <repositories>
+        <repository>
+            <id>nexus-repo</id>
+            <url>http://192.168.49.1:8081/repository/maven-public/</url>
+        </repository>
+    </repositories>
 
     <properties>
     <maven.compiler.source>1.8</maven.compiler.source>
