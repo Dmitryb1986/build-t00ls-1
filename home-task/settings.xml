@@ -2,8 +2,6 @@
   <servers>
       <server>
          <id>Nexus3</id>
-         <username>jenkins</username>
-         <password>jenkins</password>
       </server>
   </servers>
   <mirrors>
