@@ -75,7 +75,7 @@ mavenJob(job) {
   rootPOM 'home-task/pom.xml'
   goals 'clean install'
   postBuildSteps {
-        shell('nohup java -jar home-task/target/ci-training-1.0.jar com.test >> home-task/target/output.log')
+        shell('java -cp home-task/target/ci-training-1.0.jar com.test >> home-task/target/output.log')
         shell('tar -cvf "$(echo $BRANCH_NAME | cut -d "/" -f 2)_dsl_script.tar.gz" home-task/target/*.jar home-task/target/output.log')
     }
   
