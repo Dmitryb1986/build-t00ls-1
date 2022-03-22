@@ -19,7 +19,7 @@ job('MNTLAB-dbarouka1-main-build-job') {
   scm {
     git {
       remote {
-        url 'https://github.com/Dmitryb1986/build-t00ls'
+        url 'https://github.com/Dmitryb1986/build-t00ls-1'
       }
       branch '$BRANCH_NAME'
     }
@@ -62,7 +62,7 @@ mavenJob(job) {
   scm {
     git {
       remote {
-        url 'https://github.com/Dmitryb1986/build-t00ls'
+        url 'https://github.com/Dmitryb1986/build-t00ls-1'
       }
       branch '$BRANCH_NAME'
     }
