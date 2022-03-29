@@ -1,0 +1,65 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: helloworld-ingress
+  namespace: dbarouka
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - host: helloworld.com
+    http:
+      paths:
+      - path: /*
+        pathType: Prefix
+        backend:
+          service:
+            name: helloworld-service
+            port:
+              number: 80
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: helloworld-deploy
+  namespace: dbarouka
+  labels:
+    app: helloworld
+spec:
+  replicas: 1
+  strategy: 
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1 
+      maxUnavailable: 1
+  selector:
+    matchLabels:
+      app: helloworld
+  template:
+    metadata:
+      labels:
+        app: helloworld
+    spec:
+      containers:
+      - name: helloworld
+        image: <IMAGE>
+        ports:
+        - containerPort: 8080
+      imagePullSecrets:
+      - name: nexus
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: helloworld-service
+  namespace: dbarouka
+spec:
+  type: NodePort
+  selector:
+    app: helloworld
+  ports:
+    - port: 8080
+      targetPort: 8080
+      nodePort: 30100
